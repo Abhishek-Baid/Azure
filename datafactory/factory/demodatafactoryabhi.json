@@ -1,0 +1,9 @@
+{
+	"name": "demodatafactoryabhi",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c58855b6-ea83-4e0a-9e1c-3a3662e2d52f",
+		"tenantId": "52d40516-4e7d-4b6c-a15a-11a698380604"
+	}
+}
