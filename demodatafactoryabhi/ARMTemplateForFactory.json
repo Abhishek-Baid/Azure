@@ -76,8 +76,10 @@
 							},
 							"sink": {
 								"type": "AzureSqlSink",
+								"preCopyScript": "truncate table dbo.CopyDemo",
 								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false
+								"sqlWriterUseTableLock": false,
+								"disableMetricsCollection": false
 							},
 							"enableStaging": false,
 							"translator": {
