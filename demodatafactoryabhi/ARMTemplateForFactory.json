@@ -364,7 +364,7 @@
 						"typeProperties": {
 							"source": {
 								"type": "AzureSqlSource",
-								"sqlReaderQuery": "truncate table [dbo].[CopyDemo] ;",
+								"sqlReaderQuery": "select * from [dbo].[CopyDemo];",
 								"queryTimeout": "02:00:00",
 								"partitionOption": "None"
 							},
