@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "demodatafactoryabhi"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"LinkedServiceAzureSQLDatabase_password": {
+			"value": ""
+		},
+		"linkedServiceSelfhost_password": {
+			"value": ""
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_server": {
+			"value": "mssqlserverabhi.database.windows.net"
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_database": {
+			"value": "mssqldatabase"
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_userName": {
+			"value": "abhi"
+		},
+		"linkedServiceSelfhost_properties_typeProperties_host": {
+			"value": "\\\\LAPTOP-F9G5N51M\\Shared_folder"
+		},
+		"linkedServiceSelfhost_properties_typeProperties_userId": {
+			"value": "laptop-f9g5n51m\\abhi"
+		}
+	}
+}

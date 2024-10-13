@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "demodatafactoryabhi"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"LinkedServiceAzureSQLDatabase_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LinkedServiceAzureSQLDatabase'"
+		},
+		"linkedServiceSelfhost_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedServiceSelfhost'"
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mssqlserverabhi.database.windows.net"
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mssqldatabase"
+		},
+		"LinkedServiceAzureSQLDatabase_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "abhi"
+		},
+		"linkedServiceSelfhost_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "\\\\LAPTOP-F9G5N51M\\Shared_folder"
+		},
+		"linkedServiceSelfhost_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "laptop-f9g5n51m\\abhi"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "demodatafactoryabhi_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"LinkedServiceAzureSQLDatabase_password": {
+						"value": "[parameters('LinkedServiceAzureSQLDatabase_password')]"
+					},
+					"linkedServiceSelfhost_password": {
+						"value": "[parameters('linkedServiceSelfhost_password')]"
+					},
+					"LinkedServiceAzureSQLDatabase_properties_typeProperties_server": {
+						"value": "[parameters('LinkedServiceAzureSQLDatabase_properties_typeProperties_server')]"
+					},
+					"LinkedServiceAzureSQLDatabase_properties_typeProperties_database": {
+						"value": "[parameters('LinkedServiceAzureSQLDatabase_properties_typeProperties_database')]"
+					},
+					"LinkedServiceAzureSQLDatabase_properties_typeProperties_userName": {
+						"value": "[parameters('LinkedServiceAzureSQLDatabase_properties_typeProperties_userName')]"
+					},
+					"linkedServiceSelfhost_properties_typeProperties_host": {
+						"value": "[parameters('linkedServiceSelfhost_properties_typeProperties_host')]"
+					},
+					"linkedServiceSelfhost_properties_typeProperties_userId": {
+						"value": "[parameters('linkedServiceSelfhost_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
