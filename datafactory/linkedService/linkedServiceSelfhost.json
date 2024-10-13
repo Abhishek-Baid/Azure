@@ -1,0 +1,17 @@
+{
+	"name": "linkedServiceSelfhost",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\LAPTOP-F9G5N51M\\Shared_folder",
+			"userId": "laptop-f9g5n51m\\abhi",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjZjljM2VmMy1lZDI3LTQ4NTctYjgzYi1kZDg5M2U5YmUxNmIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHostedLaptopIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
